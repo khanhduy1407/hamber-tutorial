@@ -1,10 +1,16 @@
 <script>
-	export let name;
+	let name = "NKDuy";
+	let color = "black";
+
+	const handleClick = () => {
+		color = "orange";
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://hamberjs.web.app/tutorial">Hamber tutorial</a> to learn how to build Hamber apps.</p>
+	<p>{color} color</p>
+	<button on:click={handleClick}>update color</button>
 </main>
 
 <style>
