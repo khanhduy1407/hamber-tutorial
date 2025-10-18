@@ -1,11 +1,19 @@
 <script>
-
+	import Header from './components/Header.hamber';
+	import Footer from './components/Footer.hamber';
 </script>
 
+<Header />
+
 <main>
-	<h1>Hello Devlopers!</h1>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur expedita consectetur iusto possimus quae, modi explicabo nihil tempore quisquam dolorem veniam eligendi fugiat numquam. Facere atque adipisci quod ipsa officiis!</p>
 </main>
 
-<style>
+<Footer />
 
+<style>
+	main {
+		max-width: 960px;
+		margin: 40px auto;
+	}
 </style>
