@@ -1,4 +1,6 @@
 <script>
+	import Modal from "./Modal.hamber";
+
 	let people = [
 		{ name: "John Doe", color: "black", age: 25, id: 1 },
 		{ name: "Jane Doe", color: "orange", age: 45, id: 2 },
@@ -20,6 +22,8 @@
 {:else}
 	<p>Not greater than 5</p>
 {/if}
+
+<Modal />
 
 <main>
 	{#each people as person (person.id)}
