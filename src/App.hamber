@@ -1,6 +1,7 @@
 <script>
 	import Header from './components/Header.hamber';
 	import Footer from './components/Footer.hamber';
+	import CreatePollForm from './components/CreatePollForm.hamber';
 	import Tabs from './shared/Tabs.hamber';
 
 	// tabs
@@ -19,7 +20,7 @@
 	{#if activeItem === "Current Polls"}
 		<p>Poll list component goes here</p>
 	{:else if activeItem === "Add New Poll"}
-		<p>New poll form component goes here</p>
+		<CreatePollForm />
 	{/if}
 </main>
 
