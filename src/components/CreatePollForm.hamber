@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "hamber";
+  import PollStore from "../stores/PollStore.js";
   import Button from "../shared/Button.hamber";
 
   let dispatch = createEventDispatcher();
@@ -51,6 +52,10 @@
         votesB: 0,
         id: Math.random()
       };
+      // save poll to store
+      PollStore.update(currentPolls => {
+        return [poll, ...currentPolls];
+      });
       dispatch("add", poll);
     }
   }

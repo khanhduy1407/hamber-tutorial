@@ -1,30 +1,12 @@
 <script>
-  // import { onMount, onDestroy } from "hamber";
   import PollStore from '../stores/PollStore.js';
   import PollDetails from './PollDetails.hamber';
-
-  // export let polls = [];
-
-  // const unsub = PollStore.subscribe(data => {
-  //   polls = data;
-  // });
-
-  // onMount(() => {
-  //   // maybe get data from a db
-  //   console.log("component mounted");
-  // });
-
-  // onDestroy(() => {
-  //   // unsub from store
-  //   console.log("component destroyed");
-  //   unsub();
-  // });
 </script>
 
 <div class="poll-list">
   {#each $PollStore as poll (poll.id)}
     <div>
-      <PollDetails {poll} on:vote />
+      <PollDetails {poll} />
     </div>
   {/each}
 </div>
