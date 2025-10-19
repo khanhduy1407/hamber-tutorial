@@ -1,5 +1,8 @@
 <script>
+  import { createEventDispatcher } from "hamber";
   import Button from "../shared/Button.hamber";
+
+  let dispatch = createEventDispatcher();
 
   let fields = {
     question: '',
@@ -42,7 +45,13 @@
 
     // add new poll
     if (valid) {
-      console.log("valid", fields);
+      let poll = {
+        ...fields,
+        votesA: 0,
+        votesB: 0,
+        id: Math.random()
+      };
+      dispatch("add", poll);
     }
   }
 </script>
